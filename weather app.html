@@ -1,0 +1,263 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyCast | Weather Dashboard</title>
+    <link rel="stylesheet" href="weather app.css">
+</head>
+<body>
+
+    <div class="app">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <a href="#" class="logo">
+                <span class="logo-icon">☁</span>
+                <span>Sky<span class="logo-accent">Cast</span></span>
+            </a>
+
+            <nav class="navigation">
+                <a href="#search" class="nav-link active">
+                    <span>⌕</span> Search
+                </a>
+                <a href="#favorites" class="nav-link">
+                    <span>♡</span> Favorites
+                </a>
+                <a href="#forecast" class="nav-link">
+                    <span>▦</span> Forecast
+                </a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <div class="sidebar-weather">🌤️</div>
+                <p>Better weather.<br>Brighter days.</p>
+                <div class="accent-line"></div>
+            </div>
+        </aside>
+
+        <!-- Main content -->
+        <main class="main-content">
+
+            <header class="topbar">
+                <div>
+                    <p class="greeting">Welcome to SkyCast</p>
+                    <h1>Explore the Weather <span>☀️</span></h1>
+                    <p class="subtitle">
+                        Your weather, all in one place.
+                    </p>
+                   
+                </div>
+                    <button id="theme-button">Bright Mode</button>
+                <div class="profile-icon">☁</div>
+            </header>
+
+            <!-- Top row: Search and Favorites -->
+            <div class="top-grid">
+
+                <!-- Search panel -->
+                <section class="panel search-panel" id="search">
+                    <div class="panel-heading">
+                        <div class="panel-icon search-icon">⌕</div>
+                        <div>
+                            <h2>Search</h2>
+                            <p>Find weather for any location</p>
+                        </div>
+                    </div>
+
+                    <form class="search-form">
+                        <input
+                            type="text"
+                            id="cityInput"
+                            placeholder="Enter city name..."
+                            aria-label="Enter city name"
+                        >
+                        <button type="button" id="search-button">
+                            Search
+                        </button>
+                    </form>
+
+                    <div class="current-weather">
+                        <div class="weather-placeholder">🌤️</div>
+
+                        <div id="weather_add1">
+                            
+                        </div>
+                        <div class="weather_add2">
+                            <h3>Check your local weather</h3>
+                            <p>Search a city to get started.</p>
+                        </div>
+                    </div>
+
+                    <button type="button" id="favorite-button">
+                        <span>＋</span> Add Favorite
+                    </button>
+                </section>
+
+                <!-- Favorites panel -->
+                <section class="panel favorites-panel" id="favorites">
+                    <div class="section-heading">
+                        <div class="panel-heading">
+                            <div class="panel-icon heart-icon">♡</div>
+                            <div>
+                                <h2>Favorites</h2>
+                                <p>Your saved locations</p>
+                            </div>
+                        </div>
+
+                        <span class="count-badge">04</span>
+                    </div>
+
+                    <div class="favorites-grid">
+                        <article class="favorite-card">
+                            <div class="city-icon">🌤️</div>
+                            <div class="city-info">
+                                
+                            </div>
+                            <div class="city-info2">
+                              <button class="remove-btn">-</button>
+                            </div>
+                            <span class="card-arrow">›</span>
+                        </article>
+
+                        <article class="favorite-card">
+                            <div class="city-icon">☀️</div>
+                            <div class="city-info">
+                                
+                            </div>
+                            <div class="city-info2">
+                              <button class="remove-btn">-</button>
+                            </div>
+                            <span class="card-arrow">›</span>
+                        </article>
+
+                        <article class="favorite-card">
+                            <div class="city-icon">☁️</div>
+                            <div class="city-info">
+                                
+                            </div>
+                            <div class="city-info2">
+                              <button class="remove-btn">-</button>
+                            </div>
+                            <span class="card-arrow">›</span>
+                        </article>
+
+                        <article class="favorite-card">
+                            <div class="city-icon">💨</div>
+                            <div class="city-info">
+                              
+                            </div>
+                            <div class="city-info2">
+                              <button class="remove-btn">-</button>
+                            </div>
+                            <span class="card-arrow">›</span>
+                        </article>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- Full-width forecast panel -->
+            <section class="panel forecast-panel" id="forecast">
+
+                <div class="forecast-header">
+                    <div class="panel-heading">
+                        <div class="panel-icon forecast-icon">▦</div>
+                        <div>
+                            <h2>5 Days Forecast</h2>
+                            <p>Weather outlook for the next five days</p>
+                        </div>
+                    </div>
+
+                    <span class="forecast-label">5 DAY OUTLOOK</span>
+                </div>
+
+                <div class="forecast-grid">
+
+                    <article class="forecast-card selected">
+                        <p class="forecast-day">Monday</p>
+                        <div class="forecast-weather">☀️</div>
+                        <h3>32°C</h3>
+                        <p class="forecast-condition">Sunny</p>
+                        <div class="temperature-range">
+                            <span>24°</span>
+                            <span class="temperature-line">
+                                <span></span>
+                            </span>
+                            <span>32°</span>
+                        </div>
+                    </article>
+
+                    <article class="forecast-card">
+                        <p class="forecast-day">Tuesday</p>
+                        <div class="forecast-weather">🌤️</div>
+                        <h3>31°C</h3>
+                        <p class="forecast-condition">Partly cloudy</p>
+                        <div class="temperature-range">
+                            <span>23°</span>
+                            <span class="temperature-line">
+                                <span></span>
+                            </span>
+                            <span>31°</span>
+                        </div>
+                    </article>
+
+                    <article class="forecast-card">
+                        <p class="forecast-day">Wednesday</p>
+                        <div class="forecast-weather">🌧️</div>
+                        <h3>29°C</h3>
+                        <p class="forecast-condition">Rainy</p>
+                        <div class="temperature-range">
+                            <span>23°</span>
+                            <span class="temperature-line">
+                                <span></span>
+                            </span>
+                            <span>29°</span>
+                        </div>
+                    </article>
+
+                    <article class="forecast-card">
+                        <p class="forecast-day">Thursday</p>
+                        <div class="forecast-weather">⛅</div>
+                        <h3>30°C</h3>
+                        <p class="forecast-condition">Cloudy</p>
+                        <div class="temperature-range">
+                            <span>23°</span>
+                            <span class="temperature-line">
+                                <span></span>
+                            </span>
+                            <span>30°</span>
+                        </div>
+                    </article>
+
+                    <article class="forecast-card">
+                        <p class="forecast-day">Friday</p>
+                        <div class="forecast-weather">☀️</div>
+                        <h3>31°C</h3>
+                        <p class="forecast-condition">Sunny</p>
+                        <div class="temperature-range">
+                            <span>24°</span>
+                            <span class="temperature-line">
+                                <span></span>
+                            </span>
+                            <span>31°</span>
+                        </div>
+                    </article>
+
+                </div>
+
+                <p class="forecast-note">
+                    * Sample forecast values for UI design only.
+                </p>
+            </section>
+
+            <footer class="footer">
+                <p>SkyCast <span>•</span> Weather made simple.</p>
+            </footer>
+
+        </main>
+    </div>
+   <script src="weather app.js"></script>
+</body>
+</html>
